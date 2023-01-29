@@ -1,0 +1,25 @@
+#dropdownMenuButtonSignIn {
+    background-color : #f03a75;
+}
+
+#dropdownMenuButtonSignUp {
+    background-color : #f03a75;
+}
+
+.dropdown {
+    float: right;
+    margin: 10px;
+}
+
+#logo {
+    width: 200px;
+}
+
+.headeritem {
+    float: left;
+}
+
+h1 {
+    padding-left: 350px;
+    padding-top: 20px;
+}

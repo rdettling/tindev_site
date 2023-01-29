@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TinDev - Candidate Sign Up</title>
+    <link rel="icon" type="image/png" href="../../../static/img/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-light bg-light" style="padding: 0.5em 0em 0.5em 1em">
+        <a class="navbar-brand" href="/" style="font-size: 1.5rem;">
+            <img src="../../../static/img/logo.png" width="50" height="50" class="d-inline-block align-center" style="margin-right: 10px" alt="">
+            
+            TinDev
+        </a>
+    </nav>
+
+    <div class="bg-dark" style="width: 100%; height: 100%; padding: 1em; margin: 0;">
+        <div class="card justify-self-center w-75 mx-auto bg-light" style="padding: 0.5rem;">
+            <h3>
+                Create your Candidate Profile
+            </h3>
+
+            <form method="post" action="/candidate/signup/">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="John Smith" Required>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Profile Bio</label>
+                    <input type="text" class="form-control" id="bio" name="bio" placeholder="I love long walks on the beach...">
+                </div>
+                <div class="form-group">
+                    <label for="zipcode">Zipcode</label>
+                    <input type="text" inputmode="numberic" class="form-control" id="zipcode" name="zipcode" placeholder="46556" Required>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <input type="text" class="form-control" id="skills" name="skills" placeholder="Django, Bootstrap..." Required>
+                </div>
+                <div class="form-group">
+                    <label for="github">GitHub Username</label>
+                    <input type="text" class="form-control" id="github" name="github" placeholder="my_github_username" Required>
+                </div>
+                <div class="form-group">
+                    <label for="years">Years of Experience</label>
+                    <input type="number" min="0" max="100" class="form-control" id="years" name="years" placeholder="0" Required>
+                </div>
+                <div class="form-group">
+                    <label for="education">Education</label>
+                    <input type="text" class="form-control" id="education" name="education" placeholder="University of Notre Dame">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="my_username" Required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="my_password" Required>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin: 1rem 0rem; border-style: none; background-color: #f03a75;">Create Profile</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
